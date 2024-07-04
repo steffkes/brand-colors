@@ -1,7 +1,7 @@
 services:
   app:
     build: .
-    command: sh -c "npm install && npx nodemon api/index.js"
+    command: sh -c "npm install && npx nodemon development.js"
     working_dir: /app
     volumes:
       - ./:/app

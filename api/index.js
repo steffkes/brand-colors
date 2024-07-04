@@ -18,7 +18,6 @@ const app = express()
     }
 
     res.type("png").send(canvas.toBuffer());
-  })
-  .listen(3000, () => console.log("Server ready on port 3000."));
+  });
 
 module.exports = app;
