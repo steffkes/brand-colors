@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "express": "^4.19.2",
     "pureimage": "^0.4.13"
   }
 }
