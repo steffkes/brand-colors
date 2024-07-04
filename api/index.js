@@ -8,7 +8,11 @@ const app = express()
     res.type("txt").send("Hello World.");
   })
   .get("/image", function (req, res) {
-    const colors = ["red", "yellow", "green"];
+    const { colors = [] } = req.query;
+
+    if (!colors.length) {
+      return res.status(400).send({ error: "colors are missing" });
+    }
 
     const canvas = createCanvas(width * colors.length, height);
     const ctx = canvas.getContext("2d");
