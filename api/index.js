@@ -3,7 +3,7 @@ const { createCanvas, loadImage } = require("canvas");
 
 const app = express()
   .get("/", function (req, res) {
-    res.send({ api: true, hello: "world" });
+    res.type("txt").send("Hello World.");
   })
   .get("/image", function (req, res) {
     const colors = ["red", "yellow", "green"];
